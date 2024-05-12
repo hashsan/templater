@@ -25,12 +25,17 @@ i{
   font-size:48px;
 }
 
+/* ページ全体に対してスムーズなスクロールを有効にする */
+html {
+    scroll-behavior: smooth;
+}
+
 body{
   font-family:system-ui,sans-serif;
   background:#000;
   color:#fff;
   padding:1rem;
-  max-width:640px;
+  max-width:500px; /*検討した結果 500pxぐらいがよい*/
   box-sizing:border-box;
   margin:auto;
   line-height:1.6;
