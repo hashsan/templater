@@ -128,6 +128,35 @@ img {
 i.ryu:before{
   content:'[';
   font-size:180px;
+}
+
+/*ryuのブリンクやul li設定*/
+ul.col,
+ul.row{
+  display:flex;
+  margin:0;padding:0;
+  list-style:none;
+  gap:1rem;
+}
+ul.col{
+  flex-direction:column;
+}
+
+
+@keyframes blink {
+  0% {
+    color: #aaa;
+  }
+  50% {
+    color: #0c0;
+  }
+  100% {
+    color: #aaa;
+  }
+}
+
+.blinking {
+  animation: blink 10s infinite;
 }  
 </style>  
 </head>
@@ -135,8 +164,15 @@ i.ryu:before{
 <body>
   <header>
   <nav class="small center">
-    <label>PR</label><a>個人情報保護方針</a><a>運営方針</a><a>お問い合わせ </a>
-  </nav>
+    <ul class="row">
+      <li>
+        <label>PR</label>
+      </li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms-of-service.html">Terms of Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>    
   <p class="small">ゲームプレイ日記</p>
   <h1>ウィザードリィの末裔たち</h1>
   <p class="small right">管理人：HOJO Kita</p>
@@ -144,7 +180,7 @@ i.ryu:before{
 <main>
 </main>
 <footer>
-  <div class="center"><i class="ryu"></i></div>  
+  <div class="center"><i class="ryu blinking"></i></div>  
   <p class="small center">© 2024 ウィザードリィの末裔たち</p><a class="ue" href="#"><i></i></a>
 </footer>
   
